@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const footerLinks = [
@@ -12,9 +13,9 @@ const footerLinks = [
 export function SiteFooter() {
   return (
     <footer className="border-t border-[#dfe7f0] bg-[#0f1f38] text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:px-6 lg:grid-cols-[1.1fr_0.9fr_0.9fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-8 md:px-6 lg:grid-cols-[1.1fr_0.9fr_0.9fr] lg:px-8">
         <div>
-          <div className="text-2xl font-semibold tracking-tight">Intellecta</div>
+          <Image src="/studyaboradlogo.jpeg" alt="Intellecta Study Abroad logo" width={300} height={80} className="my-5" />
           <p className="mt-4 max-w-md text-sm leading-7 text-[#dfeaf7]">
             Study-abroad guidance for students who want clear direction, realistic planning,
             and support from first shortlist to final visa preparation.
@@ -41,7 +42,7 @@ export function SiteFooter() {
             Contact
           </h3>
           <ul className="mt-4 space-y-3 text-sm text-[#dfeaf7]">
-            <li>hello@intellecta-studyabroad.com</li>
+            <li>info.intellectainternational@gmail.com</li>
             <li>+1 (000) 000-0000</li>
             <li>Mon to Sat, 9:00 AM to 6:00 PM</li>
           </ul>
@@ -50,7 +51,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 text-sm text-[#dfeaf7] md:px-6 lg:px-8">
           <span>© 2026 Intellecta Study Abroad</span>
-          <span>Clear guidance, practical support.</span>
+          {/* <span>Clear guidance, practical support.</span> */}
         </div>
       </div>
     </footer>

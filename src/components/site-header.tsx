@@ -7,7 +7,7 @@ const navItems = [
   { label: "Services", href: "/services" },
   { label: "Scholarships", href: "/scholarships" },
   { label: "Universities", href: "/universities" },
-  { label: "Contact", href: "/contact" },
+  // { label: "Contact", href: "/contact" },
 ];
 
 export function SiteHeader() {
@@ -15,7 +15,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-[#dfe7f0] bg-white/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3" aria-label="Intellecta Study Abroad home">
-          <div className="relative h-12 w-12 overflow-hidden rounded-full border border-[#dfe7f0] bg-white shadow-sm">
+          <div className="relative h-16 w-80 overflow-hidden bg-white">
             <Image
               src="/studyaboradlogo.jpeg"
               alt="Intellecta Study Abroad logo"
@@ -24,14 +24,14 @@ export function SiteHeader() {
               priority
             />
           </div>
-          <div>
+          {/* <div>
             <div className="text-xl font-semibold tracking-tight text-[#0f1f38]">
               Intellecta
             </div>
             <div className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#2f6fb8]">
               Study Abroad
             </div>
-          </div>
+          </div> */}
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm font-medium text-[#203a59] lg:flex">
