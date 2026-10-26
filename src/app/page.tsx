@@ -1,13 +1,11 @@
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
+import type { Metadata } from "next";
 import { HomePage } from "@/components/home-page";
 
+export const metadata: Metadata = {
+  title: "Home | Intellecta International Study Abroad",
+  description: "Study Beyond Borders. Build a Future Without Limits.",
+};
+
 export default function Page() {
-  return (
-    <>
-      <SiteHeader />
-      <HomePage />
-      <SiteFooter />
-    </>
-  );
+  return <HomePage />;
 }
