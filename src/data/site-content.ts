@@ -467,7 +467,7 @@ export const blogTopics = [
 
 export const contactDetails = [
   { label: "Office address", value: "[Add confirmed office address and branch details]" },
-  { label: "Phone / WhatsApp", value: "[Add official contact number]" },
+  { label: "Phone / WhatsApp", value: "+92 339 0152289" },
   { label: "Email", value: "[Add official email address]" },
   { label: "Website", value: "[Add website URL]" },
   { label: "Office hours", value: "[Add confirmed working days and hours]" },
