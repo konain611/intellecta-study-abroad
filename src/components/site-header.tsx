@@ -51,7 +51,7 @@ export function SiteHeader() {
         <div className="flex shrink-0 items-center gap-2">
           <Link
             href="/contact"
-            className="inline-flex whitespace-nowrap rounded-full bg-amber-500 px-2 py-2.5 text-xs font-semibold text-blue-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2 sm:px-4 sm:text-sm"
+            className="hidden whitespace-nowrap rounded-full bg-amber-500 px-2 py-2.5 text-xs font-semibold text-blue-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2 sm:px-4 sm:text-sm 2xl:inline-flex"
           >
             Book a Consultation
           </Link>
