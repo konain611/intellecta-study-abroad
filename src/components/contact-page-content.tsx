@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialIcon } from "@/components/social-icon";
 import { contactDetails, contactResponse, socialLinks } from "@/data/site-content";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { Container, PageTitle, SiteLayout } from "@/components/site-layout";
@@ -28,16 +29,18 @@ export function ContactPageContent({ defaultDestination }: { defaultDestination?
             </dl>
             <div className="mt-6">
               <h3 className="font-semibold text-blue-950">Connect with us</h3>
-              <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+              <ul className="mt-3 flex flex-wrap gap-3">
                 {socialLinks.map((social) => (
                   <li key={social.label}>
                     <a
-                      className="font-medium text-blue-800 underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+                      aria-label={social.label}
+                      title={social.label}
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-200 text-blue-800 transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
                       href={social.href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {social.label}
+                      <SocialIcon name={social.label} />
                     </a>
                   </li>
                 ))}
