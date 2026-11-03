@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { contactDetails, contactResponse } from "@/data/site-content";
+import { contactDetails, contactResponse, socialLinks } from "@/data/site-content";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { Container, PageTitle, SiteLayout } from "@/components/site-layout";
 
@@ -26,6 +26,23 @@ export function ContactPageContent({ defaultDestination }: { defaultDestination?
                 </div>
               ))}
             </dl>
+            <div className="mt-6">
+              <h3 className="font-semibold text-blue-950">Connect with us</h3>
+              <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                {socialLinks.map((social) => (
+                  <li key={social.label}>
+                    <a
+                      className="font-medium text-blue-800 underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+                      href={social.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {social.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="#enquiry" className="rounded-full bg-amber-500 px-5 py-3 text-sm font-semibold text-blue-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700">
                 Book a Consultation
