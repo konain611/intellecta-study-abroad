@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SocialIcon } from "@/components/social-icon";
 import {
   brandName,
   footerDisclaimer,
@@ -63,16 +64,18 @@ export function SiteFooter() {
           <h2 className="mt-6 text-sm font-semibold uppercase tracking-wider text-amber-300">
             Follow us
           </h2>
-          <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-blue-100">
+          <ul className="mt-3 flex flex-wrap gap-3 text-blue-100">
             {socialLinks.map((social) => (
               <li key={social.label}>
                 <a
-                  className="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+                  aria-label={social.label}
+                  title={social.label}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {social.label}
+                  <SocialIcon name={social.label} />
                 </a>
               </li>
             ))}
