@@ -465,12 +465,18 @@ export const blogTopics = [
   { title: "Parent guides", description: "supporting students through international education decisions." },
 ];
 
+export const officeAddress =
+  "Office/Shop 12, Commercial Sector D, DHA Phase 2, adjacent to DHA Army Public School";
+
+export const socialLinks = [
+  { label: "TikTok", href: "https://www.tiktok.com/@intellecta3?lang=en" },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61595974150129" },
+  { label: "Instagram", href: "https://www.instagram.com/intellectastudyabroad?obrf=dWJpaW15MnEwajJp" },
+];
+
 export const contactDetails = [
-  { label: "Office address", value: "[Add confirmed office address and branch details]" },
+  { label: "Office address", value: officeAddress },
   { label: "Phone / WhatsApp", value: "+92 339 0152289" },
-  { label: "Email", value: "[Add official email address]" },
-  { label: "Website", value: "[Add website URL]" },
-  { label: "Office hours", value: "[Add confirmed working days and hours]" },
 ];
 
 export const contactResponse =
