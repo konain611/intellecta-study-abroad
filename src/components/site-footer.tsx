@@ -3,7 +3,9 @@ import Link from "next/link";
 import {
   brandName,
   footerDisclaimer,
+  officeAddress,
   primaryNavigation,
+  socialLinks,
   secondaryNavigation,
   tagline,
 } from "@/data/site-content";
@@ -42,6 +44,9 @@ export function SiteFooter() {
         </div>
 
         <div>
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-amber-300">
+            More
+          </h2>
           <ul className="mt-4 space-y-3 text-sm text-blue-100">
             {secondaryNavigation.map((item) => (
               <li key={item.href}>
@@ -51,9 +56,29 @@ export function SiteFooter() {
               </li>
             ))}
           </ul>
+          <h2 className="mt-6 text-sm font-semibold uppercase tracking-wider text-amber-300">
+            Visit our office
+          </h2>
+          <p className="mt-3 text-sm leading-6 text-blue-100">{officeAddress}</p>
+          <h2 className="mt-6 text-sm font-semibold uppercase tracking-wider text-amber-300">
+            Follow us
+          </h2>
+          <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-blue-100">
+            {socialLinks.map((social) => (
+              <li key={social.label}>
+                <a
+                  className="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {social.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-      {/* TODO(owner): Add confirmed social media links, contact details, privacy policy, and terms of use. */}
       <div className="border-t border-white/15">
         <p className="mx-auto max-w-7xl px-4 py-5 text-sm leading-6 text-blue-100 sm:px-6 lg:px-8">
           {footerDisclaimer}
