@@ -46,7 +46,7 @@ Use the section headings in Part 2 as the page `<h1>`/`<h2>` structure exactly a
 
 ## 1.4 Design and Tailwind guidance (your own additions)
 
-- **Look and feel:** modern, trustworthy, education-focused. Clean white/light backgrounds, a deep navy or blue primary, a warm accent (amber/orange) for primary CTAs, generous whitespace, rounded cards (`rounded-2xl`), soft shadows, subtle hover transitions.
+- **Look and feel:** modern, trustworthy, education-focused. Clean white/light backgrounds, a deep red primary, a warm accent (amber/orange) for primary CTAs, generous whitespace, rounded cards (`rounded-2xl`), soft shadows, subtle hover transitions.
 - **Palette:** if the project has none, extend `tailwind.config` with `brand` (primary), `accent`, and neutral shades, then use those tokens everywhere rather than hard-coded hex values.
 - **Layout:** a reusable `Container` (`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`) and a reusable `Section` wrapper with consistent vertical padding (`py-16 md:py-24`).
 - **Responsive:** mobile-first. Every page must work from 360px wide upward. Use `grid`, `flex`, and responsive prefixes (`sm:`, `md:`, `lg:`). Navbar collapses into a mobile menu.
