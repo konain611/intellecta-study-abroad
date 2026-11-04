@@ -7,7 +7,7 @@ import { Container, PageTitle, SiteLayout } from "@/components/site-layout";
 export function ContactPageContent({ defaultDestination }: { defaultDestination?: string }) {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>Contact Us</PageTitle>
           <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-700">
@@ -18,24 +18,24 @@ export function ContactPageContent({ defaultDestination }: { defaultDestination?
       <section className="py-14 md:py-16">
         <Container className="max-w-4xl space-y-8">
           <div className="rounded-md border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-            <h2 className="text-2xl font-bold text-blue-950">Intellecta International Study Abroad</h2>
+            <h2 className="text-2xl font-bold text-red-950">Intellecta International Study Abroad</h2>
             <dl className="mt-6 space-y-5">
               {contactDetails.map((detail) => (
                 <div key={detail.label}>
-                  <dt className="font-semibold text-blue-950">{detail.label}:</dt>
+                  <dt className="font-semibold text-red-950">{detail.label}:</dt>
                   <dd className="mt-1 text-slate-700">{detail.value}</dd>
                 </div>
               ))}
             </dl>
             <div className="mt-6">
-              <h3 className="font-semibold text-blue-950">Connect with us</h3>
+              <h3 className="font-semibold text-red-950">Connect with us</h3>
               <ul className="mt-3 flex flex-wrap gap-3">
                 {socialLinks.map((social) => (
                   <li key={social.label}>
                     <a
                       aria-label={social.label}
                       title={social.label}
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-200 text-blue-800 transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-red-200 text-red-800 transition-colors hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
                       href={social.href}
                       target="_blank"
                       rel="noreferrer"
@@ -47,13 +47,13 @@ export function ContactPageContent({ defaultDestination }: { defaultDestination?
               </ul>
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="#enquiry" className="rounded-full bg-amber-500 px-5 py-3 text-sm font-semibold text-blue-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700">
+              <Link href="#enquiry" className="rounded-full bg-amber-500 px-5 py-3 text-sm font-semibold text-red-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700">
                 Book a Consultation
               </Link>
-              <Link href="#enquiry" className="rounded-full border border-blue-900 px-5 py-3 text-sm font-semibold text-blue-950 hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+              <Link href="#enquiry" className="rounded-full border border-red-900 px-5 py-3 text-sm font-semibold text-red-950 hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
                 Send an Enquiry
               </Link>
-              <Link href="#enquiry" className="rounded-full border border-blue-900 px-5 py-3 text-sm font-semibold text-blue-950 hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+              <Link href="#enquiry" className="rounded-full border border-red-900 px-5 py-3 text-sm font-semibold text-red-950 hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
                 Contact Us
               </Link>
             </div>
@@ -62,7 +62,7 @@ export function ContactPageContent({ defaultDestination }: { defaultDestination?
           </div>
 
           <div id="enquiry" className="scroll-mt-28 rounded-md border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-            <h2 className="text-2xl font-bold text-blue-950">Start Your Study Abroad Journey</h2>
+            <h2 className="text-2xl font-bold text-red-950">Start Your Study Abroad Journey</h2>
             <p className="mt-3 leading-7 text-slate-700">
               Share your details and study preferences so our team can understand your goals and contact you about relevant next steps.
             </p>
