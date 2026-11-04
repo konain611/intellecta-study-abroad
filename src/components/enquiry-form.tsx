@@ -105,7 +105,7 @@ export function EnquiryForm({ defaultDestination }: { defaultDestination?: strin
         />
         <span>
           I consent to being contacted about this enquiry and acknowledge the{" "}
-          <Link href="/privacy-policy" className="font-semibold text-blue-900 underline underline-offset-2">
+          <Link href="/privacy-policy" className="font-semibold text-red-900 underline underline-offset-2">
             privacy notice
           </Link>
           .
@@ -114,7 +114,7 @@ export function EnquiryForm({ defaultDestination }: { defaultDestination?: strin
       <div className="sm:col-span-2">
         <button
           type="submit"
-          className="inline-flex rounded-full bg-amber-500 px-7 py-3 font-semibold text-blue-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
+          className="inline-flex rounded-full bg-amber-500 px-7 py-3 font-semibold text-red-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
         >
           Submit Enquiry
         </button>
