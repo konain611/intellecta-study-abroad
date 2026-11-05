@@ -39,7 +39,7 @@ export function SiteHeader() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={`rounded px-1 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
-                  active ? "text-blue-950" : "text-slate-700 hover:text-blue-950"
+                  active ? "text-red-600" : "text-slate-700 hover:text-red-600"
                 }`}
               >
                 {item.label}
@@ -51,13 +51,13 @@ export function SiteHeader() {
         <div className="flex shrink-0 items-center gap-2">
           <Link
             href="/contact"
-            className="hidden whitespace-nowrap rounded-full bg-amber-500 px-2 py-2.5 text-xs font-semibold text-blue-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2 sm:px-4 sm:text-sm 2xl:inline-flex"
+            className="hidden whitespace-nowrap rounded-full bg-amber-500 px-2 py-2.5 text-xs font-semibold text-red-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2 sm:px-4 sm:text-sm 2xl:inline-flex"
           >
             Book a Consultation
           </Link>
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 text-blue-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 2xl:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 text-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 2xl:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
@@ -85,7 +85,7 @@ export function SiteHeader() {
                   aria-current={active ? "page" : undefined}
                   onClick={() => setMenuOpen(false)}
                   className={`block rounded-lg px-3 py-3 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
-                    active ? "bg-blue-50 text-blue-950" : "text-slate-700 hover:bg-slate-50"
+                    active ? "bg-red-50 text-red-600" : "text-slate-700 hover:bg-slate-50"
                   }`}
                 >
                   {item.label}
