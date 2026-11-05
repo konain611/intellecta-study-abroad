@@ -13,7 +13,7 @@ import {
 
 export function SiteFooter() {
   return (
-    <footer className="bg-blue-950 text-white">
+    <footer className="bg-red-700 text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr] lg:px-8">
         <div>
           <Link href="/" aria-label={`${brandName} home`}>
@@ -26,14 +26,14 @@ export function SiteFooter() {
             />
           </Link>
           <p className="mt-4 max-w-sm text-lg font-semibold">{brandName}</p>
-          <p className="mt-2 text-sm leading-6 text-blue-100">{tagline}</p>
+          <p className="mt-2 text-sm leading-6 text-red-50">{tagline}</p>
         </div>
 
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-wider text-amber-300">
             Explore
           </h2>
-          <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-blue-100">
+          <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-red-50">
             {primaryNavigation.map((item) => (
               <li key={item.href}>
                 <Link className="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300" href={item.href}>
@@ -48,7 +48,7 @@ export function SiteFooter() {
           <h2 className="text-sm font-semibold uppercase tracking-wider text-amber-300">
             More
           </h2>
-          <ul className="mt-4 space-y-3 text-sm text-blue-100">
+          <ul className="mt-4 space-y-3 text-sm text-red-50">
             {secondaryNavigation.map((item) => (
               <li key={item.href}>
                 <Link className="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300" href={item.href}>
@@ -60,11 +60,11 @@ export function SiteFooter() {
           <h2 className="mt-6 text-sm font-semibold uppercase tracking-wider text-amber-300">
             Visit our office
           </h2>
-          <p className="mt-3 text-sm leading-6 text-blue-100">{officeAddress}</p>
+          <p className="mt-3 text-sm leading-6 text-red-50">{officeAddress}</p>
           <h2 className="mt-6 text-sm font-semibold uppercase tracking-wider text-amber-300">
             Follow us
           </h2>
-          <ul className="mt-3 flex flex-wrap gap-3 text-blue-100">
+          <ul className="mt-3 flex flex-wrap gap-3 text-red-50">
             {socialLinks.map((social) => (
               <li key={social.label}>
                 <a
@@ -83,7 +83,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/15">
-        <p className="mx-auto max-w-7xl px-4 py-5 text-sm leading-6 text-blue-100 sm:px-6 lg:px-8">
+        <p className="mx-auto max-w-7xl px-4 py-5 text-sm leading-6 text-red-50 sm:px-6 lg:px-8">
           {footerDisclaimer}
         </p>
       </div>
