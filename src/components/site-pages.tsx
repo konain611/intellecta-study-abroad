@@ -32,7 +32,7 @@ function TextPageIntro({ children }: { children: string }) {
 export function AboutPageContent() {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>About Us</PageTitle>
           <div className="mt-8 max-w-4xl space-y-5 text-lg leading-8 text-slate-700">
@@ -43,22 +43,22 @@ export function AboutPageContent() {
       <section className="py-16 md:py-20">
         <Container className="grid gap-10 md:grid-cols-2">
           <ContentCard>
-            <h2 className="text-2xl font-bold text-blue-950">Our Mission</h2>
+            <h2 className="text-2xl font-bold text-red-600">Our Mission</h2>
             <p className="mt-4 leading-8 text-slate-700">{aboutContent.mission}</p>
           </ContentCard>
           <ContentCard>
-            <h2 className="text-2xl font-bold text-blue-950">Our Vision</h2>
+            <h2 className="text-2xl font-bold text-red-600">Our Vision</h2>
             <p className="mt-4 leading-8 text-slate-700">{aboutContent.vision}</p>
           </ContentCard>
         </Container>
       </section>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <SectionTitle>Our Values</SectionTitle>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {aboutContent.values.map((value) => (
               <ContentCard key={value.title}>
-                <h3 className="text-xl font-semibold text-blue-950">{value.title}:</h3>
+                <h3 className="text-xl font-semibold text-red-600">{value.title}:</h3>
                 <p className="mt-3 leading-7 text-slate-700">{value.description}</p>
               </ContentCard>
             ))}
@@ -68,7 +68,7 @@ export function AboutPageContent() {
       <section className="py-16 md:py-20">
         <Container>
           <SectionTitle>Director&apos;s Message</SectionTitle>
-          <blockquote className="mt-7 max-w-4xl rounded-md border-l-4 border-amber-400 bg-blue-50 p-6 text-lg leading-8 text-slate-700">
+          <blockquote className="mt-7 max-w-4xl rounded-md border-l-4 border-amber-400 bg-red-50 p-6 text-lg leading-8 text-slate-700">
             {aboutContent.directorMessage}
           </blockquote>
           {/* TODO(owner): Have the Director approve this message and add their name and designation if desired. */}
@@ -81,7 +81,7 @@ export function AboutPageContent() {
 export function ServicesPageContent() {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>Our Services</PageTitle>
           <TextPageIntro>
@@ -95,11 +95,11 @@ export function ServicesPageContent() {
           {/* TODO(owner): Include only training, internship, mentoring, or test-preparation programs that Intellecta actually offers. */}
           {serviceSections.map((service) => (
             <ContentCard key={service.title}>
-              <h2 className="text-2xl font-bold text-blue-950">{service.title}</h2>
+              <h2 className="text-2xl font-bold text-red-600">{service.title}</h2>
               <p className="mt-4 leading-8 text-slate-700">{service.description}</p>
               {service.bullets.length > 0 ? <BulletList items={service.bullets} /> : null}
               {service.notice ? (
-                <p className="mt-5 rounded-md border border-amber-300 bg-amber-50 p-4 font-medium leading-7 text-blue-950">
+                <p className="mt-5 rounded-md border border-amber-300 bg-amber-50 p-4 font-medium leading-7 text-red-950">
                   {service.notice}
                 </p>
               ) : null}
@@ -114,7 +114,7 @@ export function ServicesPageContent() {
 function DestinationCard({ destination }: { destination: Destination }) {
   return (
     <ContentCard className="flex h-full flex-col">
-      <h2 className="text-2xl font-bold text-blue-950">
+      <h2 className="text-2xl font-bold text-red-600">
         <Link
           href={`/destinations/${destination.slug}`}
           className="rounded-sm hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
@@ -128,7 +128,7 @@ function DestinationCard({ destination }: { destination: Destination }) {
       <BulletList items={destination.bullets} />
       <Link
         href={`/contact?destination=${destination.slug}`}
-        className="mt-6 inline-flex self-start rounded-full bg-amber-500 px-5 py-3 text-sm font-semibold text-blue-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
+        className="mt-6 inline-flex self-start rounded-full bg-amber-500 px-5 py-3 text-sm font-semibold text-red-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
       >
         {destination.cta}
       </Link>
@@ -139,7 +139,7 @@ function DestinationCard({ destination }: { destination: Destination }) {
 export function DestinationsPageContent() {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>Study Destinations</PageTitle>
           <TextPageIntro>
@@ -154,9 +154,9 @@ export function DestinationsPageContent() {
           ))}
         </Container>
       </section>
-      <section className="bg-blue-50 py-12">
+      <section className="bg-red-50 py-12">
         <Container>
-          <p className="rounded-md border border-blue-200 bg-white p-6 leading-7 text-slate-700">
+          <p className="rounded-md border border-red-200 bg-white p-6 leading-7 text-slate-700">
             {destinationDisclaimer}
           </p>
         </Container>
@@ -168,7 +168,7 @@ export function DestinationsPageContent() {
 export function DestinationDetailPageContent({ destination }: { destination: Destination }) {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>{destination.name}</PageTitle>
           {destination.introduction ? <TextPageIntro>{destination.introduction}</TextPageIntro> : null}
@@ -176,7 +176,7 @@ export function DestinationDetailPageContent({ destination }: { destination: Des
             <BulletList items={destination.bullets} />
             <Link
               href={`/contact?destination=${destination.slug}`}
-              className="mt-6 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-blue-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
+              className="mt-6 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-red-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
             >
               {destination.cta}
             </Link>
@@ -185,7 +185,7 @@ export function DestinationDetailPageContent({ destination }: { destination: Des
       </section>
       <section className="py-12">
         <Container>
-          <p className="rounded-md border border-blue-200 bg-blue-50 p-6 leading-7 text-slate-700">
+          <p className="rounded-md border border-red-200 bg-red-50 p-6 leading-7 text-slate-700">
             {destinationDisclaimer}
           </p>
         </Container>
@@ -197,7 +197,7 @@ export function DestinationDetailPageContent({ destination }: { destination: Des
 export function ScholarshipsPageContent() {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>Scholarships and Funding</PageTitle>
           <TextPageIntro>
@@ -224,7 +224,7 @@ export function ScholarshipsPageContent() {
 export function CourseSearchPageContent() {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>Study Options and Course Search</PageTitle>
           <TextPageIntro>
@@ -241,11 +241,11 @@ export function CourseSearchPageContent() {
               )}
             />
           </div>
-          <div className="rounded-md border border-slate-200 bg-blue-50 p-6">
+          <div className="rounded-md border border-slate-200 bg-red-50 p-6">
             {/* TODO(owner): A live course-search tool requires a reliable, up-to-date course database. */}
             <div className="grid gap-4 sm:grid-cols-2">
               {["Destination", "Study Level", "Subject", "Intake", "Budget Range"].map((label) => (
-                <label key={label} htmlFor={`filter-${label}`} className="text-sm font-medium text-blue-950">
+                <label key={label} htmlFor={`filter-${label}`} className="text-sm font-medium text-red-600">
                   {label}
                   <input
                     id={`filter-${label}`}
@@ -258,7 +258,7 @@ export function CourseSearchPageContent() {
             </div>
             <Link
               href="/contact#enquiry"
-              className="mt-6 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-blue-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
+              className="mt-6 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-red-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
             >
               Help Me Find a Course
             </Link>
@@ -272,7 +272,7 @@ export function CourseSearchPageContent() {
 export function StudentStoriesPageContent() {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>Student Stories and Outcomes</PageTitle>
           <TextPageIntro>
@@ -286,7 +286,7 @@ export function StudentStoriesPageContent() {
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {storyFormats.map((format) => (
               <ContentCard key={format.title}>
-                <h2 className="text-xl font-semibold text-blue-950">{format.title}:</h2>
+                <h2 className="text-xl font-semibold text-red-600">{format.title}:</h2>
                 <p className="mt-3 leading-7 text-slate-700">{format.description}</p>
               </ContentCard>
             ))}
@@ -302,7 +302,7 @@ export function StudentStoriesPageContent() {
 export function EventsPageContent() {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>University Partners and Events</PageTitle>
           <TextPageIntro>
@@ -315,7 +315,7 @@ export function EventsPageContent() {
           <BulletList items={eventGuidance} />
           {/* TODO(owner): Verify partnerships and logo permissions before publishing. */}
           <div id="upcoming-events" aria-hidden="true" className="mt-8 min-h-24 rounded-md border border-dashed border-slate-300 bg-slate-50" />
-          <Link href="#upcoming-events" className="mt-7 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-blue-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2">
+          <Link href="#upcoming-events" className="mt-7 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-red-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2">
             View Upcoming Events
           </Link>
         </Container>
@@ -336,7 +336,7 @@ export function CounsellorCard({ counsellor }: { counsellor: Counsellor }) {
           className="mb-5 aspect-square w-full rounded-md object-cover"
         />
       ) : null}
-      <h2 className="text-xl font-semibold text-blue-950">{counsellor.name}</h2>
+      <h2 className="text-xl font-semibold text-red-600">{counsellor.name}</h2>
       <p className="mt-2 text-slate-700">{counsellor.jobTitle}</p>
       <p className="mt-3 leading-7 text-slate-700">{counsellor.education}</p>
       <p className="mt-3 text-sm text-slate-600">{counsellor.destinations.join(", ")}</p>
@@ -351,7 +351,7 @@ export function CounsellorCard({ counsellor }: { counsellor: Counsellor }) {
 export function CounsellorsPageContent() {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>Meet Our Counsellors</PageTitle>
           <TextPageIntro>
@@ -365,7 +365,7 @@ export function CounsellorsPageContent() {
           <div className="mt-7 max-w-4xl">
             <BulletList items={counsellorProfileFormat} />
           </div>
-          <p className="mt-7 font-medium leading-7 text-blue-950">
+          <p className="mt-7 font-medium leading-7 text-red-600">
             Only publish accurate qualifications, experience, rankings, and professional claims that can be verified.
           </p>
           {/* TODO(owner): Add verified counsellor profiles with approved details and photos. */}
@@ -395,7 +395,7 @@ export function FaqPageContent() {
 
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>Frequently Asked Questions</PageTitle>
         </Container>
@@ -404,7 +404,7 @@ export function FaqPageContent() {
         <Container className="max-w-4xl space-y-4">
           {faqItems.map(({ question, answer }) => (
             <details key={question} className="group rounded-md border border-slate-200 bg-white p-5 shadow-sm">
-              <summary className="cursor-pointer list-none pr-8 text-lg font-semibold text-blue-950 marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+              <summary className="cursor-pointer list-none pr-8 text-lg font-semibold text-red-600 marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
                 {question}
                 <span aria-hidden="true" className="float-right text-amber-700 group-open:rotate-45">+</span>
               </summary>
@@ -421,7 +421,7 @@ export function FaqPageContent() {
 export function BlogPageContent() {
   return (
     <SiteLayout>
-      <section className="bg-blue-50 py-16 md:py-20">
+      <section className="bg-red-50 py-16 md:py-20">
         <Container>
           <PageTitle>Blog and Student Resources</PageTitle>
           <TextPageIntro>
@@ -434,14 +434,14 @@ export function BlogPageContent() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {blogTopics.map((topic) => (
               <ContentCard key={topic.title}>
-                <h2 className="text-xl font-semibold text-blue-950">{topic.title}:</h2>
+                <h2 className="text-xl font-semibold text-red-600">{topic.title}:</h2>
                 <p className="mt-3 leading-7 text-slate-700">{topic.description}</p>
               </ContentCard>
             ))}
           </div>
           {/* TODO(owner): Add accurate, current, reviewed resource articles before publishing. */}
           <div id="resources" aria-hidden="true" className="mt-8 min-h-24 rounded-md border border-dashed border-slate-300 bg-slate-50" />
-          <Link href="#resources" className="mt-7 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-blue-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2">
+          <Link href="#resources" className="mt-7 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-red-950 hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2">
             Explore More Student Resources
           </Link>
         </Container>
