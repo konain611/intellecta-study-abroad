@@ -105,7 +105,7 @@ export function EnquiryForm({ defaultDestination }: { defaultDestination?: strin
         />
         <span>
           I consent to being contacted about this enquiry and acknowledge the{" "}
-          <Link href="/privacy-policy" className="font-semibold text-red-900 underline underline-offset-2">
+          <Link href="/privacy-policy" className="font-semibold text-red-600 underline underline-offset-2">
             privacy notice
           </Link>
           .
@@ -124,7 +124,7 @@ export function EnquiryForm({ defaultDestination }: { defaultDestination?: strin
           </p>
         ) : null}
         {status === "error" ? (
-          <p role="alert" className="mt-4 rounded-md bg-red-50 p-4 text-sm leading-6 text-red-900">
+          <p role="alert" className="mt-4 rounded-md bg-red-50 p-4 text-sm leading-6 text-red-700">
             Please complete the required fields before submitting your enquiry.
           </p>
         ) : null}
