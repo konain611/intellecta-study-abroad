@@ -23,7 +23,7 @@ export function Container({ children, className = "" }: { children: ReactNode; c
 
 export function PageTitle({ children }: { children: ReactNode }) {
   return (
-    <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-blue-950 sm:text-5xl md:text-6xl">
+    <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-red-600 sm:text-5xl md:text-6xl">
       {children}
     </h1>
   );
@@ -31,7 +31,7 @@ export function PageTitle({ children }: { children: ReactNode }) {
 
 export function SectionTitle({ children }: { children: ReactNode }) {
   return (
-    <h2 className="text-3xl font-bold tracking-tight text-blue-950 md:text-4xl">
+    <h2 className="text-3xl font-bold tracking-tight text-red-600 md:text-4xl">
       {children}
     </h2>
   );
@@ -68,7 +68,7 @@ export function ConsultationLink({ children = "Book a Consultation" }: { childre
   return (
     <Link
       href="/contact"
-      className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-blue-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
+      className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-red-950 transition-colors hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
     >
       {children}
     </Link>
